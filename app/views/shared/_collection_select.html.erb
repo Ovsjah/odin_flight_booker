@@ -1,0 +1,4 @@
+<div class='form-group col-auto'>
+  <%= form.label name, class: 'col-form-label' %>
+  <%= form.collection_select "#{name}_id", collection, :id, :code, {include_blank: false, selected: selected}, {class: 'form-control'} %>
+</div>

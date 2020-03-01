@@ -1,0 +1,22 @@
+<% provide(:header, "Booking Information") %>
+<ul class="list-group list-group-flush">
+  <%= render 'flights/flight', flight: @booking.flight %>
+  <h4 class="title text-secondary font-italic">Passenger(s) information</h4>
+  <div class='row justify-content-center'>
+    <% @booking.passengers.each_with_index do |passenger, idx| %>
+      <li class="col-md-5 list-group-item rounded mx-4">
+        <h5 class='title'><%= (idx+1).ordinalize %> passenger</h5>
+        <h4>
+          <span class='badge badge-info'>
+            <span class='text-dark font-weight-normal'>Email:</span>
+            <%= passenger.email %>
+          </span>
+          <span class='badge badge-info'>
+            <span class='text-dark font-weight-normal'>Name:</span>
+            <%= passenger.name %>
+          </span>
+        </h4>
+      </li>
+    <% end %>
+  </div>
+</ul>

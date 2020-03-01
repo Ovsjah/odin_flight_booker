@@ -1,0 +1,37 @@
+<h4 class='card-title text-secondary font-italic'>Flight information</h4>
+<li class="list-group-item bg-info rounded pb-0 mb-4">
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      <h4 class='card-title'>
+        <span class='badge badge-info'>
+          <span class='text-dark font-weight-normal'>Date:</span>
+          <%= flight.date&.strftime('%_d %b %Y %H:%M') %>
+        </span>
+      </h4>
+    </div>
+    <div class='col-auto'>
+      <h4 class='card-title'>
+        <span class='badge badge-info'>
+          <span class='text-dark font-weight-normal'>Departure:</span>
+          <%= flight.departure.code %>
+        </span>
+      </h4>
+    </div>
+    <div class='col-auto'>
+      <h4 class='card-title'>
+        <span class='badge badge-info'>
+          <span class='text-dark font-weight-normal'>Arrival:</span>
+          <%= flight.arrival.code %>
+        </span>
+      </h4>
+    </div>
+    <div class='col-auto'>
+      <h4 class='card-title'>
+        <span class='badge badge-info'>
+          <span class='text-dark font-weight-normal'>Flight ID:</span>
+          <%= flight.id %>
+        </span>
+      </h4>
+    </div>
+  </div>
+</li>

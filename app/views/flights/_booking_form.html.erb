@@ -1,0 +1,32 @@
+<%= form_with scope: :booking, url: new_booking_path, local: true, method: :get, class: 'form' do |f| %>
+  <%= f.hidden_field :seats, value: @seats %>
+  <table class='table table-striped table-bordered table-dark justify-content-center'>
+    <thead>
+      <tr>
+        <th class='pl-4'>Departure</th>
+        <th>Arrival</th>
+        <th>Date</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= f.collection_radio_buttons :flight_id, @flights, :id, :departure_code do |r| %>
+        <tr>
+          <td class='custom-control custom-radio pl-5'>
+            <%= r.radio_button type: :radio, id: r.object.id, required: true, class: 'custom-control-input'  %>
+            <%= r.label for: r.object.id, class: 'custom-control-label text-primary' %>
+          </td>
+          <td class='text-info'><%= r.object.arrival.code %></td>
+          <td class='text-success'><%= r.object.date&.strftime('%_d %b %Y %H:%M') %></td>
+          <td class='text-warning'><%= distance_of_time_in_words r.object.duration %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class='col-md-12 form-group btn-group'>
+    <% unless @seats %>
+      <%= f.select :seats, 1..4, {prompt: 'How many tickets?'}, {class: 'col-sm-4 form-control rounded-0', required: true} %>
+    <% end %>
+    <%= f.submit 'Proceed', class: 'btn btn-outline-primary font-weight-bold' %>
+  </div>
+<% end %>
