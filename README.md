@@ -1,5 +1,8 @@
 # [Odin Flight Booker](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms#project-flight-booker)
 
+# [Odin Flight Booker (Heroku deployed)](https://ovsjazz-odin-flight-booker.herokuapp.com/)
+
+## Project description
 A typical airline booking flow:
 
 1. Enter desired dates / airports and click “Search”
