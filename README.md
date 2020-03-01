@@ -1,4 +1,4 @@
-# [Odin Flight Booker](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms#project-flight-booker)
+# [Odin Flight Booker (Odin's task description)](https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms#project-flight-booker)
 
 # [Odin Flight Booker (Heroku deployed)](https://ovsjazz-odin-flight-booker.herokuapp.com/)
 
