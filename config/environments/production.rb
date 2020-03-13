@@ -113,9 +113,11 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
+  # Heroku deploy
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = 'ovsjazz-odin-flight-booker.herokuapp.com'
+  config.action_controller.asset_host = "//#{host}"
   config.action_mailer.default_url_options = { host: host }
 
   config.action_mailer.smtp_settings = {
