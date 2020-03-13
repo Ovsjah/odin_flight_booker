@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <nav class='navbar sticky-top bg-secondary p-0'>
+      <%= link_to root_path, class: 'navbar-brand p-0' do %>
+        <h3 class='title text-warning m-2'>
+          <%= image_tag 'odin-logo.svg', size: 50 %>
+          Odin Flight Booker
+        </h3>
+      <% end %>
+    </nav>
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>

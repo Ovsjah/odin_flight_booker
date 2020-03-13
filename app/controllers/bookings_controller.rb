@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking = @flight.bookings.build booking_params
 
     if @booking.save
+      @booking.passengers.each { |passenger| PassengerMailer.thank_you_email(passenger).deliver_later }
       redirect_to @booking, flash: { success: "Gongrats you booked a trip!" }
     else
       flash.now[:danger] = "Something went wrong, sorry."
