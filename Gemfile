@@ -30,7 +30,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use a real queuing backend for Active Job
 gem 'sidekiq'
-gem 'redis'
 gem 'thin'
 
 group :development, :test do
