@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use a real queuing backend for Active Job
-gem 'sidekiq', '5.2.7'
+gem 'sidekiq'
+gem 'redis'
 gem 'thin'
 
 group :development, :test do
