@@ -3,5 +3,5 @@ Sidekiq.configure_server do |config|
 end
 
 Sidekiq.configure_client do |config|
-  config.redis = { ENV['REDISTOGO_URL']  }
+  config.redis = { url: ENV['REDISTOGO_URL']  }
 end
