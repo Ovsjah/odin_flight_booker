@@ -9,7 +9,7 @@ A typical airline booking flow:
 2. Choose from among a list of eligible flights
 3. Enter passenger information for all passengers
 4. Enter billing information
-5. Send an async email with the link to the booking information
+5. Check the email with booking info in your mailbox
 
 ## Tech Stack
-Bootstrap4, Sidekiq, Redis
+ActiveJob, Bootstrap4, Sidekiq, Redis, SendGrid
